@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Foto Pesona Kalimantan Utara</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: #9dc7f2;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .login-container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background: rgb(99, 158, 198);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .dashboard-container {
+        padding: 20px;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+      }
+
+      .gallery-container {
+        padding: 20px 0;
+      }
+
+      .gallery-title {
+        text-align: center;
+        margin: 30px 0;
+        color: #343a40;
+      }
+
+      .gallery-item {
+        margin-bottom: 30px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        opacity: 0.9;
+      }
+
+      .image-caption {
+        padding: 15px;
+        background-color: white;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+
+   
+    </style>
+  </head>
+  <body>
+    <div class="login-container" id="loginPage">
+      <h2 class="text-center mb-4">Login</h2>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" required />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+    </div>
+
+    <div id="dashboardPage" style="display: none">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Galeri Foto</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> 
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Beranda</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="biodata.html">Tentang</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/viroo_ro?igsh=MTF2Mnk5eDFieHIwag==">Kontak</a></li>
+              <li class="nav-item ms-2">
+                <button class="btn btn-outline-light" id="logoutBtn">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container gallery-container">
+        <h1 class="gallery-title">Galeri Pesona Kalimantan Utara</h1>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="gallery-item">
+              <img src="amal.png" class="img-fluid" alt="Pantai amal" />
+              <div class="image-caption">
+                <h5>Pantai Amal (Tarakan)</h5>
+                <p class="text-muted">Pantai indah dengan sunset menawan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="gallery-item">
+              <img src="puutih.png" class="img-fluid" alt="Gunung putih" />
+              <div class="image-caption">
+                <h5>Gunung putih (tanjung palas)</h5>
+                <p class="text-muted">Bukit kapur bersejarah nan eksotis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="gallery-item">
+              <img src="batik.png" class="img-fluid" alt="sebatik" />
+              <div class="image-caption">
+                <h5>Pulau Sebatik (Nunukan)</h5>
+                <p class="text-muted">Pulau perbatasan dengan panorama laut.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="gallery-item">
+              <img src="terjun.png" class="img-fluid" alt="air terjun" />
+              <div class="image-caption">
+                <h5>Air Terjun Gunung Rian (Tanah Tidung)</h5>
+                <p class="text-muted">Air terjun alami dalam hutan tropis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="gallery-item">
+              <img src="hutan.png" class="img-fluid" alt="hutan" />
+              <div class="image-caption">
+                <h5>Hutan Lindung Sungai Sesayap (Tanah Tidung)</h5>
+                <p class="text-muted">
+                  Hutan asri hijau dengan sungai alami jernih.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="gallery-item">
+              <img
+                src="solomon.png"
+                class="img-fluid"
+                alt="air terjun Semolon" />
+              <div class="image-caption">
+                <h5>Air Terjun Semolon (Malinau)</h5>
+                <p class="text-muted">
+                  Air panas alami bertingkat menenangkan tubuh lelah.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container text-center">
+          <p>© 2025 Krisno Wibowo. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          if (username === "admin" && password === "admin123") {
+            document.getElementById("loginPage").style.display = "none";
+            document.getElementById("dashboardPage").style.display = "block";
+          } else {
+            alert("Username/password salah!");
+          }
+        });
+
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          if (confirm("Apakah Anda yakin ingin logout?")) {
+            document.getElementById("dashboardPage").style.display = "none";
+            document.getElementById("loginPage").style.display = "block";
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+          }
+        });
+    </script>
+  </body>
+</html>
